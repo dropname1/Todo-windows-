@@ -1,0 +1,131 @@
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background:linear-gradient(180deg,#FFA378,#ff661f );
+  color: rgb(0, 0, 0);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.todoWindow {
+  width: 200px;
+  max-width: 250px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  background-color: #ffa378;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  cursor:default;
+}
+
+.todoWindow span {
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 18px;
+}
+.mainWrapper {
+  margin: auto;
+  width: 1280px;
+  height: 720px;
+}
+.windows {
+  display: flex;
+}
+.addTodoWindow {
+  font-size: 25px;
+  line-height: 30px;
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  cursor: default;
+  color: black;
+}
+.addTodoWindow:hover {
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.589);
+  transition: background-color 0.2s;
+}
+.taskInput {
+  width: 900px;
+  background-color: gold;
+  border: 1px solid rgba(0, 0, 0, 0.507);
+  height: 45px;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 13px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.taskWrapper {
+  width: 900px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  /* background-color: rgba(252, 199, 199, 0.185); */
+  border-bottom: 2px solid white;   
+}
+.inputChecWrapper {
+  display: flex;
+  /* width: 30px; */
+}
+.check {
+  z-index: 20;
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.label {
+  position: relative;
+  left: -32px;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0.329);
+  box-shadow: inset 1px 1px 3px black; 
+  border: 1px solid transparent;  
+  border-radius: 50%;
+  margin-top: 3px;
+  z-index: 10;
+}
+.check:checked + .label {
+  background-color: deeppink;
+  box-shadow:0px 0px 0px black; 
+  border: 1px solid black;
+}
+.task {
+  position: relative;
+  left: -20px;
+}
+.removeTask {
+  cursor: pointer;
+  margin-left: auto;
+  font-size: 20px;
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 42px;
+}
+.taskDone {
+  text-decoration: line-through;
+}
+.activeWindow {
+  border-bottom: none;
+}
